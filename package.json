@@ -1,0 +1,43 @@
+{
+  "name": "simple-level-logger",
+  "version": "1.0.0",
+  "description": "A simple wrapper for console.log that supports NPM log levels.",
+  "main": "./dist/logger.js",
+  "scripts": {
+    "test": "npm run transpile && ./node_modules/mocha/bin/mocha --bail --reporter dot --compilers js:babel-core/register",
+    "transpile": "babel src --out-dir dist -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UWFosterIT/simple-level-logger.git"
+  },
+  "author": "Kevin Coleman <gabugabu@uw.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UWFosterIT/simple-level-logger/issues"
+  },
+  "homepage": "https://github.com/UWFosterIT/simple-level-logger#readme",
+  "devDependencies": {
+    "@types/sinon": "^2.3.2",
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.6.0",
+    "chai": "^4.1.0",
+    "eslint": "^4.2.0",
+    "mocha": "^3.4.2",
+    "sinon": "^2.3.8",
+    "sinon-chai": "^2.11.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  }
+}
