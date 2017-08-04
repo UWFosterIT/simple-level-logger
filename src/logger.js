@@ -1,3 +1,5 @@
+import util from 'util';
+
 let toInitialCap = function (str) {
   return str.charAt(0).toUpperCase() + str.toLowerCase().slice(1);
 };
@@ -38,7 +40,7 @@ let logger = {
     for (let i = 0; i < args.length; i++) {
       if (logLevels.indexOf(msgLevel) >= logLevels.indexOf(logLevel)) {
         if (typeof args[i] !== 'string') {
-          args[i] = JSON.stringify(args);
+          args[i] = util.inspect(args[i], false, null);
         }
         console.log(`${msgLevel}: ${args[i]}`);
       }
