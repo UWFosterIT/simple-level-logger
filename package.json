@@ -1,8 +1,8 @@
 {
   "name": "simple-level-logger",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A simple wrapper for console.log that supports NPM log levels.",
-  "main": "./src/logger.js",
+  "main": "src/logger.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --bail --reporter dot"
   },
