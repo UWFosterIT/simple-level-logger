@@ -1,7 +1,7 @@
-import chai from 'chai';
-import log from '../dist/logger';
-import sinon from 'sinon';
-import sinonChai from 'sinon-chai';
+const chai = require('chai');
+const log = require('../src/logger');
+const sinon = require('sinon');
+const sinonChai = require('sinon-chai');
 
 chai.use(sinonChai);
 

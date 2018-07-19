@@ -2,7 +2,7 @@
 
 Simple Level Logger is a wrapper for console.log that enables reporting of log events based on a specified logging level. The levels follow the standard NPM logging levels: error, warn, info, verbose, debug, and silly.
 
-This module works with Node.js.
+This module works with Node.js version 8.11.1 and later.
 
 ## Install
 
