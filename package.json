@@ -1,6 +1,6 @@
 {
   "name": "simple-level-logger",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A simple wrapper for console.log that supports NPM log levels.",
   "main": "src/logger.js",
   "scripts": {

@@ -34,4 +34,4 @@ The default log level is `Info`.
 
 ## Develop
 
-To add features to this module, git clone the repository, run `npm install`, add tests, make changes, and then execute `npm run transpile` to build the module.
+To add features to this module, git clone the repository, run `npm install`, add tests, make changes.
