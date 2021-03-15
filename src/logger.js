@@ -1,10 +1,10 @@
-let toInitialCap = function (str) {
+const toInitialCap = function (str) {
   return str.charAt(0).toUpperCase() + str.toLowerCase().slice(1);
 };
-let logLevels = ['Silly', 'Debug', 'Verbose',  'Info', 'Warn', 'Error'];
+const logLevels = ['Silly', 'Debug', 'Verbose', 'Info', 'Warn', 'Error'];
 let logLevel = 'Info';
 
-let logger = {
+const logger = {
   init: function (level) {
     if (level) {
       level = toInitialCap(level);
@@ -35,10 +35,8 @@ let logger = {
     this.log('Silly', arguments);
   },
   log: function (msgLevel, args) {
-    for (let i = 0; i < args.length; i++) {
-      if (logLevels.indexOf(msgLevel) >= logLevels.indexOf(logLevel)) {
-        console.log(`${msgLevel}: ${args[i]}`);
-      }
+    if (logLevels.indexOf(msgLevel) >= logLevels.indexOf(logLevel)) {
+      console.log(`${msgLevel}:`, ...args);
     }
   }
 };

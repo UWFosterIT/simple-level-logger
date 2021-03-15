@@ -19,12 +19,22 @@ afterEach(() => {
 describe('Log with logLevel Info', () => {
   it('should print "Info: test"', () => {
     log.info('test');
-    expect(console.log).to.be.calledWith('Info: test');
+    expect(console.log).to.be.calledWith('Info:', 'test');
+  });
+
+  it('should print out an object', () => {
+    log.info({ data: 'data', message: {title: 'Title', body: 'body'}});
+    expect(console.log).to.be.calledWith('Info:', { data: 'data', message: {title: 'Title', body: 'body'}});
+  });
+
+  it('should print "Info: asdf test"', () => {
+    log.info('asdf', 'test');
+    expect(console.log).to.be.calledWith('Info:', 'asdf', 'test');
   });
 
   it('should not print "Debug: test"', () => {
     log.debug('test');
-    expect(console.log).to.not.be.calledWith('Debug: test');
+    expect(console.log).to.not.be.calledWith('Debug:', 'test');
   });
 });
 
@@ -32,17 +42,17 @@ describe('Log with logLevel Silly', () => {
   it('should print all messages', () => {
     log.setLevel('silly');
     log.error('test');
-    expect(console.log).to.be.calledWith('Error: test');
+    expect(console.log).to.be.calledWith('Error:', 'test');
     log.warn('test');
-    expect(console.log).to.be.calledWith('Warn: test');
+    expect(console.log).to.be.calledWith('Warn:', 'test');
     log.info('test');
-    expect(console.log).to.be.calledWith('Info: test');
+    expect(console.log).to.be.calledWith('Info:', 'test');
     log.verbose('test');
-    expect(console.log).to.be.calledWith('Verbose: test');
+    expect(console.log).to.be.calledWith('Verbose:', 'test');
     log.debug('test');
-    expect(console.log).to.be.calledWith('Debug: test');
+    expect(console.log).to.be.calledWith('Debug:', 'test');
     log.silly('test');
-    expect(console.log).to.be.calledWith('Silly: test');
+    expect(console.log).to.be.calledWith('Silly:', 'test');
 
   });
 });
