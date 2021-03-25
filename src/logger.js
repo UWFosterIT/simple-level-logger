@@ -1,3 +1,5 @@
+require("util").inspect.defaultOptions.depth = null;
+
 const toInitialCap = function (str) {
   return str.charAt(0).toUpperCase() + str.toLowerCase().slice(1);
 };

@@ -36,6 +36,11 @@ describe('Log with logLevel Info', () => {
     log.debug('test');
     expect(console.log).to.not.be.calledWith('Debug:', 'test');
   });
+  it('should output deep objects', () => {
+    console.log('\n\nVisually inspect following output to make sure you do not see [object]\n\n');
+    log.info({this: { that: { theOther: { how: { deep: { does: {it: {go: { value: 'value'}}}}}}}}});
+    // I haven't seen a way to test the actual output of console.log().
+  });
 });
 
 describe('Log with logLevel Silly', () => {
