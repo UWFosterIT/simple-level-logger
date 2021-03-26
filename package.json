@@ -1,8 +1,8 @@
 {
   "name": "simple-level-logger",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "description": "A simple wrapper for console.log that supports NPM log levels.",
-  "main": "src/logger.js",
+  "main": "dist/logger.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --bail --reporter dot"
   },
@@ -17,14 +17,21 @@
   },
   "homepage": "https://github.com/UWFosterIT/simple-level-logger#readme",
   "devDependencies": {
+    "@types/node": "^14.14.36",
     "@types/sinon": "^9.0.11",
+    "@types/typescript": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
     "chai": "^4.3.4",
     "eslint": "^7.22.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
     "mocha": "^8.3.2",
-    "sinon": "^9.2.4",
-    "sinon-chai": "^3.5.0"
+    "sinon": "^10.0.0",
+    "sinon-chai": "^3.6.0",
+    "typescript": "^4.2.3"
   },
   "engines": {
     "node": ">=8.11.1"
-  }
+  },
+  "types": "dist/logger.d.ts",
+  "prepublish": "tsc"
 }
